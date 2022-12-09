@@ -32,7 +32,9 @@ class UserController {
 
     return res.json({ token });
   }
+
   async login(req, res) {}
+  
   async auth(req, res, next) {
     const { id } = req.query;
     if (!id) {

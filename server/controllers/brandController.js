@@ -14,8 +14,8 @@ class BrandController {
 
   async delete(req, res) {
     const { id } = req.params;
-    await Brand.destroy({ where: { id } });
-    return;
+    const destroyBrand = await Brand.destroy({ where: { id } });
+    return res.json(destroyBrand);
   }
 }
 
